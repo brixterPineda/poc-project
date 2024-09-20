@@ -1,0 +1,42 @@
+﻿@page "/questionnaire"
+
+
+    <h2>Double Materiality Questionnaire</h2>
+    <form method="post">
+        <!-- Input fields for Stakeholder information-->
+        <h4>Personal Information</h4>
+        <div class = "stakeholderInfo contentSection">
+            <label for="stakeholderName">Name:</label>
+            <input type="text" id="stakeholderName" name="stakeholderName" required />
+
+            <label for="organization">Organization:</label>
+            <input type="text" id="organization" name="organization" required />
+
+            <label for="role">Role:</label>
+            <input type="text" id="role" name="role" required />
+
+            <label for="category">Category:</label>
+            <input type="text" id="category" name="category" required />
+        </div>
+
+        <!-- Dynamic fields for each material issue's relevance score-->
+        <!-- TODO: Must be inside a loop to generate the questions-->
+        <h4>Issues</h4>
+        <div class = "issues contentSection">
+            <div class = "issue-content">
+                <label>Sample Name Issue</label>
+                <input type="range" min="1" max="5" value="3" class="slider" id="issueResponse" />
+            </div>
+        </div>
+
+        <h4>Do You Have Any Other Issues To Add?</h4>
+         <div class="additionalIssues contentSection">
+        <label for="additionalIssues">Please specify:</label>
+        <textarea id="additionalIssues" name="additionalIssues" rows="4" placeholder="Enter additional issues here..."></textarea>
+    </div>
+
+        <!-- Save or Submit buttons-->
+        <button type="submit">Submit</button>
+        <button type="button" onclick="saveForLater()">Save for Later</button>
+    </form>
+    <link href="~/css/questionnaire.css" rel="stylesheet" type="text/css" asp-append-version="true"/>
