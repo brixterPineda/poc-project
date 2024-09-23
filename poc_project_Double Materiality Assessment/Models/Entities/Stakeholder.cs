@@ -1,4 +1,4 @@
-﻿namespace poc_project_Double_Materiality_Assessment.Models
+﻿namespace poc_project_Double_Materiality_Assessment.Models.Entities
 {
     public class Stakeholder
     {
@@ -7,7 +7,8 @@
         public string Organization { get; set; }
         public string Role { get; set; }
         public string Category { get; set; }
-        //public ICollection<ResponseRelevance> RelevanceResponses { get; set; }
+
+        public ICollection<ResponseRelevance> RelevanceResponses { get; set; }
 
     }
 }

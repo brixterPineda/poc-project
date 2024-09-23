@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-using poc_project_Double_Materiality_Assessment.Models;
+using poc_project_Double_Materiality_Assessment.Models.Entities;
 using System.Diagnostics;
 
 namespace poc_project_Double_Materiality_Assessment.Controllers
@@ -28,10 +28,6 @@ namespace poc_project_Double_Materiality_Assessment.Controllers
             return View();
         }
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+      
     }
 }
