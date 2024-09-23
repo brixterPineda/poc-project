@@ -1,8 +1,21 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<poc_project_Double_Materiality_Assessment.Models.Entities.MaterialIssue>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h2>Material Issues</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Issue Name</th>
+            <th>Category</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var issue in Model)
+        {
+                <tr>
+                    <td>@issue.IssueName</td>
+                    <td>@issue.IssueCategory</td>
+                </tr>
+        }
+    </tbody>
+</table>
